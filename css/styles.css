@@ -2,4 +2,5 @@ body{
     background-image:url(blando.jpeg);
     height:100px;
     background-size:cover;
+    background-position:center;
     }
