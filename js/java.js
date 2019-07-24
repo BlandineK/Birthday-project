@@ -10,7 +10,7 @@ var submit=( ( (cc/4) -2*cc-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day )%7 ;
 var submit=Math.floor(submit);
 console.log(submit);
 
-var get=["Sunday=Kwasi","Monday=Kwadwo","Tuesday=Kwabena","Wednesday=Kwaku","Thursday=Yaw","Friday=Kofi","Saturday=kwame"]
+var get=["Kwasi : Sunday","Kwadwo : Monday","Kwabena : Tuesday","Kwaku : Wednesday","Yaw : Thursday","Kofi : Friday","kwame : Saturday"]
 if(day>0 && day<=31 && month>0 && month <12 && year>0){
 if ( submit==0 && gender=="Male" ){
 
@@ -40,7 +40,7 @@ else if ( submit==6 && gender=="Male"){
 
     document.getElementById("add").innerHTML=("The akan name is " + get[6]);
 }
-var get=["Sunday=Akosua","Monday=Adwoa","Wednesday=Akua","Thursday=Yaa","Friday=Afua","Saturday=Ama"]
+var get=["Akosua : Sunday","Adwoa : Monday","Abenaa: Tuesday","Akua : Wednesday","Yaa : Thursday","Afua : Friday","Ama : Saturday"]
     if ( submit==0 && gender=="Female" ){
     
         document.getElementById("add").innerHTML=("The akan name is " + get[0]);
