@@ -1,66 +1,65 @@
 function myResult() {
-var day=document.getElementById("blandine1").Value;
-var month=document.getElementById("blandine2").value;
-var year=document.getElementById("blandine3").value;
-var gender=document.getElementById("boy,girl").value;
-var cc=(year-1)/100+1;
-var submit=( ( (cc/4) -2*CC-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day )%7 ;
-var Submit=Math.floor(submit);
+var day=parseInt(document.getElementById("blandine1").value);
+var month=parseInt(document.getElementById("blandine2").value);
+var year=parseInt(document.getElementById("blandine3").value);
+var gender=document.querySelector("boy","girl").value;
 
-var get=["kwasi was born on sunday","kwadwo was born on monday","kwabena was born on tuesday","kwaku was born on wednesday","yaw was born on thursday","kofi was born on friday","kwame was born on saturday"]
+
+var cc=(year-1)/100+1;
+var submit=( ( (cc/4) -2*cc-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day )%7 ;
+var submit=Math.floor(submit);
+console.log(submit);
+
+var get=["kwasi","kwadwo","kwabena","Kwaku","yaw","kofi","kwame"]
 if(day>0 && day<=31 && month>0 && month <12 && year>0){
-if ( Submit==0 && gender=="male" ){
+if ( submit==0 && gender=="Male" ){
 
     document.getElementById("add").innerHTML=get[0];
 }
-else if (Submit==1 && gender=="male"){
+else if (submit==1 && gender=="Male"){
 
     document.getElementById("add").innerHTML=get[1];
 }
-else if ( Submit==3 && gender=="male"){
+else if ( submit==3 && gender=="Male"){
 
     document.getElementById("add").innerHTML=get[3];
 }
-else if ( Submit==4 && gender=="male"){
+else if ( submit==4 && gender=="Male"){
 
     document.getElementById("add").innerHTML=get[4];
 }
-else if ( Submit==5 && gender=="male"){
+else if ( submit==5 && gender=="Male"){
 
     document.getElementById("add").innerHTML=get[5];
 }
-else if ( Submit==6 && gender=="male"){
+else if ( submit==6 && gender=="Male"){
 
     document.getElementById("add").innerHTML=get[6];
 }
-
-
-var get=["akosua was born on sunday","adwoa was born on monday","abenaa was born on tuesday","akua was born on wednesday","yaa was born on thursday","afua was born on friday","ama was born on saturday"]
-if(day>0 && day<=31 && month>0 && month <12 && year>0){
-    if ( Submit==0 && gender=="female" ){
+    if ( submit==0 && gender=="Female" ){
     
         document.getElementById("add").innerHTML=get[0];
     }
-    else if (Submit==1 && gender=="female"){
+    else if (submit==1 && gender=="Female"){
     
         document.getElementById("add").innerHTML=get[1];
     }
-    else if ( Submit==3 && gender=="female"){
+    else if ( submit==3 && gender=="Female"){
     
         document.getElementById("add").innerHTML=get[3];
     }
-    else if ( Submit==4 && gender=="female"){
+    else if ( submit==4 && gender=="Female"){
     
         document.getElementById("add").innerHTML=get[4];
     }
-    else if ( Submit==5 && gender=="female"){
+    else if ( submit==5 && gender=="Female"){
     
         document.getElementById("add").innerHTML=get[5];
     }
-    else if ( Submit==6 && gender=="female"){
+    else if ( submit==6 && gender=="Female"){
     
-        document.getElementById("add").innerHTML=get[6]
+        document.getElementById("add").innerHTML=get[6];
     }
 }
 }
-}
+
